@@ -96,9 +96,12 @@ const noticiaPrincipal=()=>{
     const img      = $('<img class="img-responsive" src="assets/img/news-0.png">');
     const divTitulo= $('<div class="titulo"></div> ');
     const titulo   = $('<h2>'+state.newTitle[0].title+'</h2>');
-    const subtitulo= $('<h6>'+state.newTitle[0].brief+'</h6>');
+    const subtitulo= $('<h6 class="hidden-xs">'+state.newTitle[0].brief+'</h6>');
+    const divImg2  = $('<div class="row"></div>');
 
     container.append(img);
+    divImg2.append(noticiaSecundaria());
+    container.append(divImg2);
     divTitulo.append(titulo);
     divTitulo.append(subtitulo);
     container.append(divTitulo);
@@ -106,4 +109,16 @@ const noticiaPrincipal=()=>{
     return container;
 }
 
+const noticiaSecundaria=()=>{
+    const divSub    = $('<div class="col-xs-12 col-md-5"></div>');
+    const img1      = $('<img class="img-responsive" src="assets/img/news-1.png">')
+    const divTitulo1= $('<div class="subtitulo"></div>');
+    const titulo    = $('<h3>'+state.newTitle[1].title+'</h3>');
+
+    divTitulo1.append(titulo);
+    divSub.append(img1);
+    divSub.append(divTitulo1);
+
+    return divSub;
+}
 

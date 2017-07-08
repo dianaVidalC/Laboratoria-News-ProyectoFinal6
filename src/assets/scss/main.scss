@@ -39,7 +39,12 @@ body{
   padding: 0;
   .titulo{
     position: absolute;
-    bottom: 0;
+    top:19rem;
     color:$color-white;
+  }
+  .subtitulo{
+    background-color: #2B2B2B;
+    color: white;
+    padding: 1rem;
   }
 }
