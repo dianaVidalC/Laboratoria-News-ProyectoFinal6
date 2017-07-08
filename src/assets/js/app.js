@@ -13,13 +13,12 @@ const state={
 }
 
 $( _ => {
-    $.get('https://localhost:3000/api/news')
-        .done(function (response) {
-            state.newTitle=response;
-            const root = $('.root');
-            render(root);
-        });
 
+    getJSON('https://localhost:3000/api/news/', (json) => {
+        state.newTitle = json;
+        const root = $('.root');
+        render(root);
+    });
 });
 
 const barraSuperior=_=>{
@@ -97,7 +96,7 @@ const noticiaPrincipal=()=>{
     const img      = $('<img class="img-responsive" src="assets/img/news-0.png">');
     const divTitulo= $('<div class="titulo"></div> ');
     const titulo   = $('<h2>'+state.newTitle[0].title+'</h2>');
-    const subtitulo= $('<h4>'+state.newTitle[0].brief+'</h4>');
+    const subtitulo= $('<h6>'+state.newTitle[0].brief+'</h6>');
 
     container.append(img);
     divTitulo.append(titulo);
