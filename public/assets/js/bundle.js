@@ -13,12 +13,12 @@ const state={
 }
 
 $( _ => {
-
-    getJSON('https://localhost:3000/api/news/', (json) => {
-        state.newTitle = json;
-        const root = $('.root');
-        render(root);
-    });
+    $.get('http://localhost:3000/api/news/')
+        .done(function (response) {
+            state.newTitle=response;
+            const root = $('.root');
+            render(root);
+        });
 });
 
 const barraSuperior=_=>{
