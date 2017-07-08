@@ -1,0 +1,45 @@
+$color-lab:#F7B617;
+$color-white:#fff;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  padding-top: 1.5rem;
+}
+
+.social{
+  &__img{
+    margin-right: 15px;
+  }
+}
+
+.container-inferior {
+  .nav-responsive{
+    margin-top: 2rem;
+    background-color: $color-lab;
+    padding: 1.6rem 12rem;
+  }
+  .align-center{
+    margin-bottom: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .col-white {
+    color: $color-white;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+.container-news {
+  position: relative;
+  padding: 0;
+  .titulo{
+    position: absolute;
+    bottom: 0;
+    color:$color-white;
+  }
+}
