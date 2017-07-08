@@ -13,7 +13,7 @@ const state={
 }
 
 $( _ => {
-    $.get('http://localhost:3000/api/news/')
+    $.get('/api/news/')
         .done(function (response) {
             state.newTitle=response;
             const root = $('.root');
